@@ -9,7 +9,7 @@ import Vue from 'vue';
  * Hello, world
  */
 new Vue({
-  el: '#app-1',
+  el  : '#app-1',
   data: {
     message: 'Hello, world.'
   }
@@ -19,7 +19,7 @@ new Vue({
  * Two-way binding
  */
 new Vue({
-  el: '#app-2',
+  el  : '#app-2',
   data: {
     message: 'Hello, world.'
   }
@@ -29,7 +29,7 @@ new Vue({
  * Render a list
  */
 new Vue({
-  el: '#app-3',
+  el  : '#app-3',
   data: {
     todos: [{
       text: 'Learn JavaScript'
@@ -38,5 +38,20 @@ new Vue({
     }, {
       text: 'Build Something Awesome'
     }]
+  }
+});
+
+/**
+ * Handle user input
+ */
+new Vue({
+  el     : '#app-4',
+  data   : {
+    message: 'Hello, world.'
+  },
+  methods: {
+    reverseMessage() {
+      this.message = this.message.split('').reverse().join('');
+    }
   }
 });
