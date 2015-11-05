@@ -3,6 +3,20 @@ extends ./_layout
 block content
 	.container
 		h1 Tutorial of vue.js
-		form#app.form
-			p {{ message }}
-			input(v-model="message").form-control
+		.row#app-1
+			.col-md-12
+				h2 Hello, world.
+			.col-md-12
+				p {{ message }}
+		.row#app-2
+			.col-md-12
+				h2 Two-way binding
+				form.form
+					p {{ message }}
+					input(v-model="message").form-control
+		.row#app-3
+			.col-md-12
+				h2 Render a list
+			.col-md-6
+				ul.list-group
+					li(v-for="todo in todos").list-group-item {{ todo.text }}
