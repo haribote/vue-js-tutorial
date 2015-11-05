@@ -25,5 +25,17 @@ block content
 				h2 Handle user input
 			.col-md-12
 				form.form
-					p {{ message }}
-					button(v-on:click="reverseMessage", type="button").btn.btn-default Reverse message
+					.panel.panel-default
+						.panel-body.
+							<p>{{ message }}</p>
+							<button v-on:click="reverseMessage" type="button" class="btn btn-default">Reverse message</button>
+		.row#app-5
+			.col-md-12
+				h2 All together
+			.col-md-6.
+					<input v-model="newTodo" v-on:keyup.enter="addTodo" class="form-control">
+			.col-md-6
+				ul.list-group
+					li(v-for="todo in todos").list-group-item.
+						<span>{{ todo.text }}</span>
+						<button v-on:click="removeTodo($index)" class="btn btn-danger btn-xs">X</button>
