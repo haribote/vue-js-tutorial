@@ -1,5 +1,8 @@
 extends ./_layout
 
 block content
-	h1 Tutorial of vue.js
-	#app {{ message }}
+	.container
+		h1 Tutorial of vue.js
+		form#app.form
+			p {{ message }}
+			input(v-model="message").form-control
