@@ -2,4 +2,12 @@
  * main.js
  */
 
-console.log('Hello, world.');
+/** @require vue */
+import Vue from 'vue';
+
+new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello, world.'
+  }
+});
